@@ -69,7 +69,7 @@ const LeftContent = () => {
           fontSize: "40px",
         }}
       >
-        {wordIndex === words.length - 2 &&
+        {wordIndex === words.length - 1 &&
         charIndex === words[wordIndex].length ? (
           <>
             {displayed}
@@ -82,7 +82,7 @@ const LeftContent = () => {
                 animation: "blink 1s step-end infinite",
               }}
             >
-              &nbsp;
+               
             </span>
           </>
         ) : (
@@ -97,7 +97,7 @@ const LeftContent = () => {
                 animation: "blink 1s step-end infinite",
               }}
             >
-              &nbsp;
+               
             </span>
           </>
         )}
@@ -105,20 +105,39 @@ const LeftContent = () => {
 
       <MotionTypography
         variant="body1"
-        sx={{ mb: 4, color: "text.secondary", fontSize: "14px" }}
+        sx={{
+          mb: 4,
+          color: "text.secondary",
+          fontSize: "16px",
+          lineHeight: 1.8,
+        }}
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.6 }}
       >
-        Far far away, behind the word mountains, far from the countries Vokalia
-        and Consonantia, there live the blind texts.
+        A small river named Duden flows by their place and supplies it with the
+        necessary regelialia. It is a paradisematic country, in which roasted
+        parts of sentences fly into your mouth. [1, 4]
+      </MotionTypography>
+
+      <MotionTypography
+        variant="body2"
+        sx={{ mb: 4, color: "text.secondary", fontSize: "14px" }}
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.8, duration: 0.6 }}
+      >
+        Even the all-powerful Pointing has no control about the blind texts it
+        is an almost unorthographic life. [1, 4] One day however a small line of
+        blind text by the name of Lorem Ipsum decided to leave for the far World
+        of Grammar. [1, 5]
       </MotionTypography>
 
       <MotionButton
         variant="contained"
         size="large"
-        sx={{ borderRadius: "30px", px: 4, py: 1, color: "whitesmoke" }}
-        whileHover={{ scale: 1.05 }}
+        sx={{ borderRadius: "30px", px: 4, py: 1.5, color: "whitesmoke" }}
+        whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(0,0,0,0.2)" }}
         whileTap={{ scale: 0.95 }}
       >
         Get in Touch
