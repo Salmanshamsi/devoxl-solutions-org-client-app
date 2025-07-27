@@ -6,12 +6,12 @@ export const myContext = createTheme({
       main: "#21aeb8",
     },
     background: {
-      default: "#031d29",
-      paper: "#001d2a",
+      default: "#f2f6f9",
+      paper: "#02111c",
     },
     text: {
-      primary: "#212121",
-      secondary: "#757575",
+      primary: "#02111c",
+      secondary: "#21aeb8",
     },
   },
 
